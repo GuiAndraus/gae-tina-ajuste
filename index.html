@@ -3,123 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GAE Construtora</title>
+    <title>Ross Construções - Sua obra em boas mãos</title>
+    <meta name="description" content="Empresa especializada em construção civil, reformas e projetos arquitetônicos. Qualidade e confiança há mais de 10 anos.">
+    
+    <!-- TinaCMS -->
+    <script type="module">
+        import { TinaCMS } from 'tinacms'
+        
+        const cms = new TinaCMS({
+            enabled: true,
+            sidebar: true,
+        })
+    </script>
+    
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/custom.css">
-    <link href="https://fonts.googleapis.com/css?family=Candal:300,400,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Estilos básicos para o TinaCMS */
+        .tina-editor {
+            min-height: 200px;
+            padding: 20px;
+            border: 2px dashed #ccc;
+            margin: 10px 0;
+        }
+        
+        .tina-editor:hover {
+            border-color: #007bff;
+        }
+        
+        .editable {
+            position: relative;
+        }
+        
+        .editable:hover {
+            outline: 2px dashed #007bff;
+            outline-offset: 4px;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <div class="logo">
-                <img src="images/logo.png" alt="Ross Construções" />
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <img src="images/logo.png" alt="Ross Construções" class="logo" onerror="this.style.display='none'">
+                    <h1>Ross Construções</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="/admin" class="admin-link">✏️ Editar</a></li>
+                </ul>
             </div>
-            <div class="contact-info">
-                <a href="https://instagram.com" target="_blank">Instagram</a>
-                <a href="https://facebook.com" target="_blank">Facebook</a>
-                <a href="tel:15981916654">Fornecedores (15) 9 8191-6654</a>
-                <a href="tel:15981443944">Solicite seu orçamento (15) 9 8144.3944</a>
-            </div>
-        </div>
+        </nav>
     </header>
 
-    <nav>
-        <div class="container">
-            <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#sobre">Sobre Nós</a></li>
-                <li><a href="#obras">Nossas Obras</a></li>
-                <li><a href="#servicos">Nossos Serviços</a></li>
-                <li><a href="#videos">Vídeos de Obras</a></li>
-                <li><a href="#fornecedor">Fornecedor</a></li>
-                <li><a href="#contato">Fale Conosco</a></li>
-            </ul>
-        </div>
-    </nav>
-
     <main>
-        <section id="home" class="hero" data-sb-object-id="home-page">
-            <div class="hero-content">
-                <h1 data-sb-field-path="title">Ross Construções</h1>
-                <div class="services-grid">
-                    <div class="service-item">
-                        <h3 data-sb-field-path="services.0.name">Construção Civil</h3>
-                    </div>
-                    <div class="service-item">
-                        <h3 data-sb-field-path="services.1.name">Estruturas Metálicas</h3>
-                    </div>
-                    <div class="service-item">
-                        <h3>Engenharia</h3>
-                    </div>
-                    <div class="service-item">
-                        <h3>Residências Metálicas</h3>
+        <section id="home" class="hero editable" data-tina-field="home.body">
+            <div class="container">
+                <h1 class="editable" data-tina-field="home.title">Ross Construções - Sua obra em boas mãos</h1>
+                <p class="hero-subtitle editable" data-tina-field="home.description">Empresa especializada em construção civil, reformas e projetos arquitetônicos. Qualidade e confiança há mais de 10 anos.</p>
+                
+                <div class="hero-content editable">
+                    <h2>Nossos Serviços</h2>
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <h3>🏗️ Construção Civil</h3>
+                            <p>Casas, edifícios e estruturas comerciais</p>
+                        </div>
+                        <div class="service-card">
+                            <h3>🔨 Reformas</h3>
+                            <p>Modernização e ampliação de imóveis</p>
+                        </div>
+                        <div class="service-card">
+                            <h3>📐 Projetos Arquitetônicos</h3>
+                            <p>Design personalizado para cada cliente</p>
+                        </div>
+                        <div class="service-card">
+                            <h3>💡 Consultoria</h3>
+                            <p>Orientação técnica especializada</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="sobre" class="about">
+        <section id="sobre" class="about editable" data-tina-field="sobre.body">
             <div class="container">
-                <h2>Sobre Nós</h2>
-                <p>A ROSS CONSTRUÇÕES é uma construtora civil e fabricante de estruturas metálicas que atua com residências de médio e alto padrão e nas áreas industriais e comerciais com galpões e mezaninos. A empresa, surgiu de uma união de mais de 16 anos de trabalho comercial com gerenciamento técnico de obras. O que nos trouxe experiência e competência para nos tornarmos uma construtora e gerenciadora. Possuímos hoje 6 anos de atuação e mais de 40 obras executadas.</p>
-            </div>
-        </section>
-
-        <section id="comercial" class="commercial">
-            <div class="container">
-                <h2>Comercial da Televisão</h2>
-                <p>Na hora de construir você precisa de alguém em que possa confiar. Obras no prazo e com qualidade em materiais e mão de obra você só encontra aqui.</p>
-            </div>
-        </section>
-
-        <section id="obras" class="works">
-            <div class="container">
-                <h2>Nossas Obras</h2>
-                <p>Conheça nossos projetos e cada desafio que concluímos com os clientes mais satisfeitos do mercado</p>
-                <div class="works-gallery">
-                    <img src="images/hero-bg.jpg" alt="Obra Ross Construções" />
+                <h2 class="editable" data-tina-field="sobre.title">Sobre a Ross Construções</h2>
+                <div class="about-content editable">
+                    <p>Fundada em 2014, a <strong>Ross Construções</strong> nasceu do sonho de oferecer serviços de construção civil com qualidade superior e atendimento personalizado.</p>
+                    
+                    <h3>Por que escolher a Ross Construções?</h3>
+                    <ul class="benefits-list">
+                        <li>✅ <strong>Experiência</strong>: Mais de 10 anos no mercado</li>
+                        <li>✅ <strong>Qualidade</strong>: Materiais de primeira linha</li>
+                        <li>✅ <strong>Confiança</strong>: Equipe técnica qualificada</li>
+                        <li>✅ <strong>Prazo</strong>: Cumprimento rigoroso dos cronogramas</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <section id="why-ross" class="why-ross">
+        <section id="servicos" class="services">
             <div class="container">
-                <h2>Porque a Ross</h2>
-                <p>Na hora de contratar a sua construtora escolha a que possui a melhor experiência e atendimento de qualidade.</p>
-                <div class="stats">
-                    <div class="stat-item">
-                        <h3>97%</h3>
-                        <p>Obras dentro do prazo</p>
+                <h2>Nossos Serviços Detalhados</h2>
+                <div class="services-detailed">
+                    <div class="service-detail editable">
+                        <h3>Construção Civil</h3>
+                        <p>Realizamos construções completas, desde a fundação até o acabamento, com materiais de qualidade e mão de obra especializada.</p>
                     </div>
-                    <div class="stat-item">
-                        <h3>5</h3>
-                        <p>Anos de Garantia</p>
+                    <div class="service-detail editable">
+                        <h3>Reformas e Ampliações</h3>
+                        <p>Modernizamos e ampliamos seu imóvel com projetos personalizados que valorizam seu patrimônio.</p>
                     </div>
-                    <div class="stat-item">
-                        <h3>+10</h3>
-                        <p>Anos de Experiência</p>
+                    <div class="service-detail editable">
+                        <h3>Projetos Arquitetônicos</h3>
+                        <p>Desenvolvemos projetos únicos que combinam funcionalidade, beleza e sustentabilidade.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="cta" class="cta">
+        <section id="contato" class="contact">
             <div class="container">
-                <h2>Chegou a hora de construir com quem entende</h2>
-                <p>Você merece a experiência de uma empresa sólida e que garante até 5 anos a qualidade da sua obra. Fale conosco agora mesmo sem compromisso.</p>
-                <a href="tel:15981443944" class="cta-button">Solicite seu orçamento</a>
+                <h2>Entre em Contato</h2>
+                <div class="contact-info editable">
+                    <p>Solicite seu orçamento sem compromisso e transforme seus projetos em realidade.</p>
+                    
+                    <div class="contact-details">
+                        <p><strong>📞 Telefone:</strong> (11) 9999-9999</p>
+                        <p><strong>📧 Email:</strong> contato@rossconstrucoes.com.br</p>
+                        <p><strong>📍 Endereço:</strong> São Paulo - SP</p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Ross Construções. Todos os direitos reservados.</p>
+            <p class="editable">&copy; 2024 Ross Construções. Todos os direitos reservados.</p>
+            <p class="editable">Desenvolvido com ❤️ para construir seus sonhos.</p>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
+    
+    <!-- TinaCMS Admin Link -->
+    <script>
+        // Adicionar link para admin do TinaCMS
+        if (window.location.hostname === 'localhost' || window.location.hostname.includes('netlify.app')) {
+            console.log('TinaCMS disponível em /admin');
+        }
+    </script>
 </body>
 </html>
 
