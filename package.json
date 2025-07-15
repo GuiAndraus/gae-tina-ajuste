@@ -6,14 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
-    "stackbit-dev": "stackbit dev",
-    "stackbit-build": "stackbit build"
+    "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^5.0.0",
-    "@stackbit/types": "^0.6.0",
-    "@stackbit/cms-git": "^0.6.0"
+    "vite": "^5.0.0"
   },
   "type": "module"
 }
